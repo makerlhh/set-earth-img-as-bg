@@ -17,7 +17,7 @@ time = res[2]
 dl = imgsrc % (date[:4], date[4:6], date[6:9], time)
 filename = "%s00_0_0.png" % (time)
 img = requests.get(dl)
-f = open(filename,"wb")
+f = open("cache/"+filename,"wb")
 print("open file")
 f.write(img.content)
 print("write file")
